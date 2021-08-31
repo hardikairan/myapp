@@ -44,7 +44,7 @@ app.use(function(err, req, res, next) {
 //   console.log('Connected to Database')
 // })
 
-MongoClient.connect('mongodb+srv://hardik_tecdune:<Welcome@29>@cluster0.ofjlb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+MongoClient.connect('mongodb+srv://hardik_tecdune:Welcome@29@cluster0.ofjlb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
   useUnifiedTopology: true
 }, (err, client) => {
   if (err) return console.error(err)

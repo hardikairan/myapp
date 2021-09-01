@@ -14,6 +14,8 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.listen(3000);
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -44,12 +46,14 @@ app.use(function(err, req, res, next) {
 //   console.log('Connected to Database')
 // })
 
-MongoClient.connect('mongodb+srv://hardik_tecdune:Welcome@29@cluster0.ofjlb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
-  useUnifiedTopology: true
-}, (err, client) => {
-  if (err) return console.error(err)
-  console.log('Connected to Database')
-})
+const db = require('./services/database');
+
+// MongoClient.connect('mongodb+srv://hardik_tecdune:kMgJi630Z5LobClZ@cluster0.ofjlb.mongodb.net/myFirstDatabases', {
+//   useUnifiedTopology: true
+// }, (err, client) => {
+//   if (err) return console.error(err)
+//   console.log('Connected to Database')
+// })
 
 // module.exports = app;
 
